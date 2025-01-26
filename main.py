@@ -1,8 +1,3 @@
-a = 5
-
-
-print(a)
-
-# #####3
-
+print('hussein tarek')
+print('Ibrahim')
 
