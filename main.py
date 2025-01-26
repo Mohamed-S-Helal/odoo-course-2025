@@ -1,7 +1,6 @@
-a = 5
+print("ibrahim abdallah")
+print('hello')
 
-
-print(a)
 
 # #####3
 
