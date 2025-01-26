@@ -1,7 +1,7 @@
+a = 5
 
 
-
-print("muhammad marzouk")
+print(a)
 
 # #####3
 
