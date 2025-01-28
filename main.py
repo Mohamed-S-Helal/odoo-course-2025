@@ -2,12 +2,12 @@
 
 # Polymorphism Format
 class Employee:
-    def __init__(self, emp_id, emp_name, emp_department, emp_jop_title, emp_salary, emp_location):
+    def __init__(self, emp_id, emp_name, emp_department, emp_job_title, emp_salary, emp_location):
         # __init__ Holds A Set Of Attribute Like (id, name, salary, ,)
         self.id = emp_id
         self.name = emp_name
         self.department = emp_department
-        self.jop_title = emp_jop_title
+        self.job_title = emp_job_title
         self.__salary = emp_salary
         self.location = emp_location
 
@@ -31,7 +31,7 @@ class Employee:
         print(f"Employee ID: {self.id}")
         print(f"Name: {self.name}")
         print(f"Department: {self.department}")
-        print(f"Job Title: {self.jop_title}")
+        print(f"Job Title: {self.job_title}")
         # Permission
         if self.get_salary() >= 10000:
             print(f"Salary: None")
@@ -42,7 +42,7 @@ class Employee:
             print(f"Salary: {self.get_salary()} LE")      # salary before tax
             print(f"Tax: {self.tax_salary()} LE")         # salary tax value
             print(f"Net.Salary: {self.net_salary()} LE")  # salary after tax
-        print(f"Location: {self.location}\n")
+        print(f"Location: {self.location}")
 
 
 # Employees Info
@@ -73,16 +73,16 @@ emp6 = Employee(6, 'Momen',
 # Polymorphism Format (Child)
 class Manager(Employee):
     def __init__(self, manag_id, emp_id, emp_name, emp_department,
-                 emp_jop_title, emp_salary, emp_location, emp_chart):
+                 emp_job_title, emp_salary, emp_location, emp_chart):
         super().__init__(emp_id, emp_name, emp_department,
-                         emp_jop_title, emp_salary, emp_location)
+                         emp_job_title, emp_salary, emp_location)
         self.organization_chart = emp_chart
         self.manag_id = manag_id
 
     def display_info(self):
         print(f"Manag ID: {self.manag_id}")
         super().display_info()
-        print(f"Organization Chart: {self.organization_chart}\n")
+        print(f"Organization Chart: {self.organization_chart}")
 
 
 # Manger Info
@@ -112,14 +112,24 @@ emp4.display_info()
 # Set New Salary For Employees
 emp4.set_salary(6500)
 
-# Last Updated Ver Of Employee
+# Last Updated Ver Of Employee (Show Info)
 emp1.display_info()
+print()
 emp2.display_info()
+print()
 emp3.display_info()
+print()
 emp4.display_info()
+print()
 emp5.display_info()
+print()
 emp6.display_info()
+print()
 
+# Managers Print Info
 manag1.display_info()
+print()
 manag2.display_info()
+print()
 manag3.display_info()
+print()
