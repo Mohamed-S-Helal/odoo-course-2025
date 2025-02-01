@@ -35,6 +35,22 @@ class Manager(Employee):
         print(f"Department: {self.department}")
 
 
-m1 = Manager('ahmed', 70000, 'Finance')
 
+
+
+class cars :
+    def __init__(self, car_name, car_type):
+        self.carname = car_name
+        self.cartype = car_type
+
+class cars(Employee):
+    def __init__(self, emp_name, emp_salary, carype, carame):
+        super().__init__(emp_name, emp_salary)
+        self.carty = carype
+        self.carnam = carame
+    def display_info(self):
+        super().display_info()
+        print(f"cars: {self.carty}, cars:{self.carnam}")
+
+m1 = cars('mahmed', 70000, 'toyota', "manga")
 m1.display_info()
